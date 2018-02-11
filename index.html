@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ville St Denis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/ionicons.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header id="home" class="clearfix">
+        <nav class="navbar navbar-default navbar-fixed-top clearfix">
+            <div class="container bam">
+                <div class="navbar-header">
+                    <div type="button" onclick="cross(this)" class="navbar-toggle nav" data-toggle="collapse" data-target="#myNavbar">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <a href="#home">
+                        <i class="fa fa-home" style="padding-left:10px;font-size:48px; color: grey;"></i>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#ville">Maps</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="parallax">
+            <span class="logo">
+                <img class="logo" src="img/logo2.svg">
+            </span>
+            <p class="hero-subtitle"> Bievenue à tous les visiteurs et visiteuses du site. La mairie de Saint-Denis partage toutes les informations
+                concernant ses quartiers ainsi que les activités mis en place.&nbsp; .</p>
+        </div>
+
+    </header>
+
+    <div class="newsletter-subscribe">
+        <div class="container">
+            <div class="intro">
+                <h2 class=" text-center visible-xs-block visible-sm-block visible-md-block visible-lg-block">Inscrivez-vous à notre newsletter</h2>
+                <p class="text-center"> Si vous souhaitez recevoir toute l'actualité de la mairie de Saint-Denis ( Evénements,Concert,Meeting,...)</p>
+            </div>
+            <form class="form-inline" method="post">
+                <div class="form-group">
+                    <input class="form-control" type="email" name="email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Subscribe </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section id="ville">
+        <div id="map"></div>
+        <article>
+            <h1 id="head1" class="text-center pad1">Informations des quartiers</h1>
+            <hr class="long" style="width: 100px;">
+            <p id="info" class="text-right info1">
+                Naviguez sur la carte interactive afin de vous d'en savoir plus sur la ville de Saint-Denis.
+            </p>
+            <p id="address"></p>
+        </article>
+    </section>
+
+    <div class="contact-clean">
+        <form method="post">
+            <h2 class="text-center">Nous Contacter</h2>
+            <div class="form-group has-success has-feedback">
+                <input id="yes" class="form-control" type="text" name="name" placeholder="Name" required="Vous devez entrez un nom">
+            </div>
+            <div class="form-group has-error has-feedback">
+                <input class="form-control" type="email" name="email" placeholder="Email" required="Vous devez entrez un email">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" rows="14" name="message" placeholder="Message" required="Vous devez entrez un message"></textarea>
+            </div>
+            <div class="form-group text-center">
+                <button class="btn btn-primary" type="submit">Envoyez </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer-basic">
+        <footer id="contact">
+            <div class="social">
+                <a href="#">
+                    <i class="icon ion-social-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="icon ion-social-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="icon ion-social-facebook"></i>
+                </a>
+            </div>
+            <p class="copyright"> TEAM JVRL © 2017</p>
+        </footer>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script> function cross(x) { x.classList.toggle("change"); } </script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmDDsbU4XQ9qlK22r3vTuq9eC8T5-8PTU&callback=initMap">
+    </script>
+
+
+</body>
+
+</html>
